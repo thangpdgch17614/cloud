@@ -1,0 +1,54 @@
+.social-part .fa{
+    padding-right:20px;
+}
+ul li a{
+    margin-right: 20px;
+}
+.section{
+    border-radius: 4px;
+    background-color: white;
+    border: 1px solid black;
+    padding-bottom: 341px;
+    margin: 50px;
+    background-image: url("https://theme.hstatic.net/1000234658/1000481063/14/slider_index_8_1.jpg?v=137");
+}
+.row{
+    margin-bottom: 5px;
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    display: block;
+}
+
+.row_left{
+    width: 33.33333333%;
+    float: left;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 40px;
+    padding-right: 5px;
+    box-sizing: border-box; 
+
+}
+.row_center{
+    padding: 0px 5px;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    width: 33.33333333%;
+}
+.row_right{
+    padding: 0px 5px;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    width: 33.33333333%;
+    
+    
+}
+.product{
+    padding: 5px;
+    background: #fff;
+    box-sizing: border-box;  
+}
+
