@@ -23,7 +23,7 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb+srv://vanhien:hienvan123@cluster0.7hfpc.mongodb.net/test";
+var url = "mongodb+srv://thang:Pdt120499@cluster0.e3dtu.mongodb.net/test";
 
 
 app.post('/doRegister', async (req, res) => {
@@ -35,18 +35,7 @@ app.post('/doRegister', async (req, res) => {
         name: inputName,
         email: inputEmail,
     }
-    if (inputName.length < 4) {
-        let errorModel = {
-            nameError: "Name must be greater than 3 characters!"
-            , emailError: "Invalid email"
-        };
-        res.render('register', { model: errorModel })
-    } else {
-        await dbo.collection("Account").insertOne(data);
-        res.redirect('/allUser');
-
-
-    }
+   
 })
 app.get("/allUser", async (req, res) => {
     let client = await MongoClient.connect(url);
