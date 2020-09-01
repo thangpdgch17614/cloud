@@ -35,7 +35,18 @@ app.post('/doRegister', async (req, res) => {
         name: inputName,
         email: inputEmail,
     }
-   
+    if (inputName.length < 4) {
+        let errorModel = {
+            nameError: "Name must be greater than 3 characters!"
+            , emailError: "Invalid email"
+        };
+        res.render('register', { model: errorModel })
+    } else {
+        await dbo.collection("Account").insertOne(data);
+        res.redirect('/allUser');
+
+
+    }
 })
 app.get("/allUser", async (req, res) => {
     let client = await MongoClient.connect(url);
